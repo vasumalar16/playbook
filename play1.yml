@@ -28,10 +28,6 @@
       path: /home/ec2-user
       regexp: ansible
       replace: online-ansible
-      
-   - name: Insert new line
-      lineinfile:
-       path: /home/ec2-user/index.html
-       line: I successfully created ansible playbook via jenkins,hurrah!
+
       
   
