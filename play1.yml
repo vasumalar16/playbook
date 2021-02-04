@@ -12,6 +12,25 @@
      copy:
       content: "THis is a sample text for Ansible"
       dest: /home/ec2-user/sample.txt
+
+- name: Modules for weblogic server
+  hosts: weblogic
+  gather_facts: no
+  
+  tasks:
+   - name: copy file from source
+     copy:
+      src: index.html
+      dest: /home/ec2-user/index.html
       
+   - name: replace
+     replace:
+      path: /home/ec2-user
+      regexp: ansible
+      replace: online-ansible
+      
+    - name: lineinfile
+      path: /home/ec2-user/index.html
+      line: I successfully created ansible playbook via jenkins,hurrah!
       
   
