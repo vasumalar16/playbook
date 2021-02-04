@@ -25,9 +25,13 @@
       
    - name: replace
      replace:
-      path: /home/ec2-user
+      path: /home/ec2-user/index.html
       regexp: ansible
       replace: online-ansible
-
+   
+   - name: lineinfile module
+     lineinfile:
+      path: /home/ec2-user/index.html
+      line: I am excited about this programming
       
   
