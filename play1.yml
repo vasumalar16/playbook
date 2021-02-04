@@ -1,0 +1,16 @@
+---
+- name: File and copy modules
+  hosts: web
+  gather_facts: no
+  tasks:
+   - name: create file
+     file:
+      path: /home/ec2-user/sample.txt
+      state: touch
+      
+   - name: copy contents
+      content: "THis is a sample text for Ansible"
+      path: /home/ec2-user/sample.txt
+      
+      
+  
