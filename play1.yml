@@ -9,8 +9,9 @@
       state: touch
       
    - name: copy contents
+     copy:
       content: "THis is a sample text for Ansible"
-      path: /home/ec2-user/sample.txt
+      dest: /home/ec2-user/sample.txt
       
       
   
